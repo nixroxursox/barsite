@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<title>Flask Tests</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="{{ url_for('static',    filename='css/template.css') }}">
+    <style>
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      li {
+        float: left;
+      }
+
+      li a {
+        display: block;
+        padding: 8px;
+        background-color: #99badd;
+      }
+      </style>
+  </head>
+ <body>
+  <header>
+      <div class="container">
+        <h1 class="logo">First Web App</h1>
+        <strong>
+          <nav>
+          <ul class="menu">
+            <li><a href="{{ url_for('login') }}">login</a></li>
+            <li><a href="{{ url_for('logout') }}">logout</a></li>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('signup') }}">Sign-Up</a></li>
+            <li><a href="{{ url_for('profile') }}">Profile</a></li>
+
+          </ul>
+         </nav>
+       </strong>
+      </div>
+  </header>
+
+{% block content %}
+{% endblock %}
+
+ </body>
+</html>
